@@ -1,9 +1,9 @@
 :root {
-  --primary-fg: #1a1a1a;         /* gris oscuro para texto principal */
-  --primary-bg: #fdfdfd;         /* fondo blanco ligeramente cálido */
-  --secondary-fg: #ffffff;       /* texto sobre colores oscuros */
-  --secondary-bg: #2d3e50;       /* azul grisáceo oscuro para secciones y navbar */
-  --pop: #007acc;                /* azul brillante para botones/enlaces destacados */
+  --primary-fg: #1a1a1a;
+  --primary-bg: #fdfdfd;
+  --secondary-fg: #ffffff;
+  --secondary-bg: #2d3e50;
+  --pop: #007acc;
   --decorative-font: "Anta", sans-serif;
   --body-font: "Segoe UI", Verdana, Tahoma, sans-serif;
 }
@@ -45,7 +45,6 @@ nav {
 }
 
 nav ul {
-  /* Handle this later with a burger */
   display: flex;
   flex-wrap: wrap;
 }
@@ -109,26 +108,6 @@ h1, h2, h3, h4 {
 .content {
   display: flex;
   flex-direction: column;
-}
-
-.siteName a {
-  font-family: var(--decorative-font);
-  font-size: 2rem;
-  text-decoration: none;
-  color: var(--primary-fg);
-  font-size: 2.5rem;
-}
-.no-bullet {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#tools a {
-  /* text-decoration: none; */
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
-  display: block;
 }
 
 /* Hero */
@@ -272,206 +251,6 @@ ul#inv-display > li div.namePrice {
   text-shadow: 0 0 25px var(--secondary-bg), 0 0 3px black;
 }
 
-  /* Error page styles */
-div.error-display {
-  display: flex;
-  flex-direction: column;
-}
-div.error-display img {
-  width: 50%;
-  align-self: center;
-}
-
-/* Car list styles section */
-section.car-listing {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  border-radius: 1rem;
-  overflow: hidden;
-}
-section.car-listing img {
-  width: 100%;
-  border-bottom: 10px solid var(--secondary-bg);
-}
-section.car-listing div.car-information {
-  grid-row: 2/4;
-  grid-column: 1/2;
-  background-color: #fff6;
-  text-shadow: 0 0 7px white;
-  backdrop-filter: blur(2px);
-  padding: 1rem;
-}
-section.car-listing dl dt {
-  font-size: 1.1rem;
-  font-weight: bolder;
-}
-
-/* Week 4 */
-.notice {
-  color: rgb(184, 194, 0);
-  list-style: none;
-  background-color: rgba(0, 0, 0, 0.747);
-  padding: .5rem;
-  border-radius: 3px;
-}
-.notice li::before {
-  content: "> ";
-}
-
-/* Login form  */
-.input-box {
-  background-color: var(--secondary-bg);
-  color: var(--secondary-fg);
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  border-radius: .5rem;
-  box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.298);
-  margin-bottom: 1rem;
-  width: 100%;
-  max-width: 500px;
-  align-self: center;
-}
-.input-box label {
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-  position: relative;
-}
-.input-box input, .input-box select, .input-box textarea, #classificationList {
-  padding: .5rem;
-  border: none;
-}
-.input-box input::placeholder, .input-box select::placeholder, .input-box textarea::placeholder {
-  color: rgba(0, 0, 0, 0.27)
-}
-.input-box input:invalid, .input-box textarea:invalid, .input-box select:invalid {
-  border-right: 5px solid red;
-}
-.input-box input[type="submit"] {
-  font-size: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  width: fit-content;
-  align-self: center;
-  background-color: var(--pop);
-  color: white;
-  border: none;
-  border-radius: .5rem;
-  box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.368);
-}
-.input-box .reveal-button {
-  color: transparent; /* To make wave happy */
-  position: absolute;
-  bottom: 0;
-  right: 5px;
-  background-color: transparent;
-  background-image: url("/images/site/eye_open.svg");
-  background-size: contain;
-  height: 2rem;
-  width: 2rem;
-  border: 0;
-}
-.input-box .reveal-button.active {
-  background-image: url("/images/site/eye_closed.svg");
-}
-.fine-print {
-  font-size: .75em;
-}
-
-/* Inventory display */
-
-#inventoryDisplay tr td:nth-child(1) {
-  width: auto;
-}
-#inventoryDisplay tr td:nth-child(2) {
-  width: 75px;
-  text-align: end;
-}
-#inventoryDisplay tr td:nth-child(3) {
-  width: 75px;
-  text-align: end;
-}
-
-/* Message view */
-.message-view {
-  background-color: rgba(255, 255, 255, 0.436);
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.message-view dl {
-  display: grid;
-  grid-template-columns: min-content 1fr;
-  margin: 0;
-  gap: 1rem;
-
-}
-.message-view dl dt, .message-view dl dd {
-  margin: 0;
-}
-.message-view dl dt {
-  font-weight: bold;
-}
-.message-view dl dt:after {
-  content: ":";
-}
-.message-pane {
-  white-space: pre-wrap;
-  font-family: var(--body-font);
-}
-
-table {
-  border: 1px solid rgba(0, 0, 0, 0.269);
-  padding: .5rem;
-  box-shadow: 0 3px 13px rgba(0, 0, 0, 0.107) inset;
-}
-table thead tr th {
-  border-bottom: 2px solid var(--secondary-bg);
-}
-
-/* Button strip style */
-.button-strip {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: .5rem;
-}
-.button-strip button, .button-strip a, .button-strip input {
-  box-sizing: border-box;
-  border: 0 solid;
-  border-radius: 0;
-  padding: .5rem;
-  height: 50px;
-  width: fit-content;
-  background-color: white;
-  cursor: pointer;
-  transition: .3s box-shadow, .3s transform;
-}
-.button-strip button:hover, .button-strip a:hover, .button-strip input:hover {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.186);
-  transform: translateY(-2px);
-  transition: .3s box-shadow, .3s transform;
-}
-.button-strip img {
-  height: 100%;
-  width: 100%;
-  pointer-events: none;
-}
-.button-strip *:first-child {
-  border-radius: .5rem 0 0 .5rem;
-}
-.button-strip *:last-child {
-  border-radius: 0 .5rem .5rem 0;
-}
-.button-strip *:only-child {
-  border-radius: .5rem;
-}
-
 @media screen and (min-width: 700px) {
   body {
     display: flex;
@@ -498,22 +277,6 @@ table thead tr th {
   }
   section#upgrades {
     grid-column: 1/2;
-    grid-row: 1/2;
-  }
-  ul#inv-display {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  section.car-listing{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  section.car-listing img {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-  section.car-listing div.car-information {
-    grid-column: 2/3;
     grid-row: 1/2;
   }
 
